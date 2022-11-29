@@ -6,19 +6,17 @@ const API_HASH = 'fc5248db272ff790c7f9772407e7e84b';
 const API_TS = 1;
 
 export default function useGetCharacters() {
-  const [characters, setCharacters] = useState([]);
+  const [comics, setComics] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/characters?ts=${API_TS}&apikey=${API_KEY}&hash=${API_HASH}&limit=10`, {
+    fetch(`${API_URL}/comics?ts=${API_TS}&apikey=${API_KEY}&hash=${API_HASH}&limit=10`, {
       method: "GET",
     })
       .then((res) => res.json())
-      .then((data) => setCharacters(data.data.results));
+      .then((data) => setComics(data.data.results));
   }, []);
 
-  
-
   return {
-    characters,
+    comics,
   }
 }

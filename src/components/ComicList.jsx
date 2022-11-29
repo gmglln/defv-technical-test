@@ -1,15 +1,15 @@
 import styles, { layout } from "../style";
 
-import useGetCharacters from "../hooks/useGetCharacters";
+import useGetComics from "../hooks/useGetComics";
 
-export default function CharacterList() {
-  const { characters } = useGetCharacters();
+export default function ComicList() {
+  const { comics } = useGetComics();
 
   return (
-    <section id="characters" className={`${styles.flexCenter} my-4`}>
+    <section id="comics" className={`${styles.flexCenter} my-4`}>
       <div className={`${styles.flexCenter} flex-wrap w-full`}>
-      <h2 className={styles.heading2}>Characters:</h2>
-        {characters.map((character) => (
+      <h2 className={styles.heading2}>Comics:</h2>
+        {comics.map((character) => (
           <div
             key={character.id}
             className={`flex-row sm:min-w-[192px] min-w-[120px] m-5`}
