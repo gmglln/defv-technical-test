@@ -1,6 +1,5 @@
 import styles from "../style";
 import { spider } from "../assets";
-import GetStarted from "./GetStarted";
 
 const Hero = () => {
   return (
@@ -25,10 +24,6 @@ const Hero = () => {
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
         <img src={spider} alt="marvel" className="w-[100%] h-[100%] relative z-[5]" />
-      </div>
-
-      <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
       </div>
     </section>
   );
